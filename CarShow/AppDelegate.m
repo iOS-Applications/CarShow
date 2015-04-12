@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainVC.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [UIApplication sharedApplication].statusBarHidden=YES;
     // Override point for customization after application launch.
+    self.window=[[CSBaseWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UINavigationController * navi=[[UINavigationController alloc] initWithRootViewController:[[MainVC alloc]init]];
+    self.window.rootViewController=navi;
+    [self.window makeKeyAndVisible];
+    [self.window bringToolViewToFront];
     return YES;
 }
 

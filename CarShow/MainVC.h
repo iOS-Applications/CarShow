@@ -1,15 +1,14 @@
 //
-//  ViewController.h
+//  MainVC.h
 //  CarShow
 //
 //  Created by Peter on 15/4/11.
 //  Copyright (c) 2015年 Peter. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CSBaseVC.h"
 
-@interface ViewController : UIViewController
-
-
+@interface MainVC : CSBaseVC
+{
+}
 @end
-
